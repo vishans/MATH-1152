@@ -1,6 +1,8 @@
 import numpy as np
 class ModuloField:
     def __init__(self, value) -> None:
+        assert (isinstance(value, int)), 'Value should strictly be an int'
+        np.set_printoptions(threshold=np.inf)
         self.value = value
         
 
@@ -36,5 +38,5 @@ class ModuloField:
 
 
 
-
-print(ModuloField(6).computeMultiplicationTable())
+if __name__ == '__main__':
+    print(ModuloField(6).computeMultiplicationTable())
